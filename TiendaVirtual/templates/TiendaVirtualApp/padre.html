@@ -35,19 +35,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
+          <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4"><!--esto es para que cada que este en una pagina la url se ilumine-->
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {% if request.path == '/servicios' %}active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {% if request.path == '/tienda' %}active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {% if request.path == '/contactos' %}active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Contactos' %}">Contacto</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {% if request.path == '/blog' %}active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
           </li>
          
