@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from TiendaVirtual import views
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('servicios/', include('serviciosApp.urls')),
+    path('', include('TiendaVirtual.urls')),
     
-    path('', include('TiendaVirtual.urls'))
     #path('TiendaVirtual/', include('TiendaVirtual.urls')) se podria hacer lo mism con otras aplicaciones
     #al raiz del pat se puede dejar vacia o
 ]
