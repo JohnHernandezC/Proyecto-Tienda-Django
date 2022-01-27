@@ -12,7 +12,7 @@ class servivios (models.Model):
         verbose_name = 'servicio'
         verbose_name_plural ='servicios'
         
-        def __str__(self):
-            return self.titulo
+    def __str__(self):
+        return self.titulo
 
 # Create your models here.

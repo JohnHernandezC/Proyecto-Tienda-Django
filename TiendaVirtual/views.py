@@ -13,9 +13,7 @@ def tienda(request):
     
     return render(request, "TiendaVirtualApp/tienda.html")
 
-def blog(request):
-    
-    return render(request, "TiendaVirtualApp/blog.html")
+
 
 def contactos(request):
     
