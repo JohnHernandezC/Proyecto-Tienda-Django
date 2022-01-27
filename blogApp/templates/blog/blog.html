@@ -30,10 +30,11 @@
 
 
   <section >
-    <div style="width: 60%; background-color:rgba(20, 59, 187, 0.61); margin: auto; text-align:center; color:red;">tags: 
+    <div style="width: 60%; background-color:rgba(20, 59, 187, 0.61); margin: auto; text-align:center; color:red;">
+      categorias: 
       {% for i in blogs %}
       {% for x in i.categorias.all %}
-      {{x.nombre}}
+      <a href="{% url 'categoria' x.id %}" class="linksCategorias">{{x.nombre}}</a>&nbsp;&nbsp;&nbsp;
       {% endfor %}
       {% endfor %}
     </div>

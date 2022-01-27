@@ -21,8 +21,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('servicios/', include('serviciosApp.urls')),
+    path('contactos/', include('contactoApp.urls')),
     path('blogs/', include('blogApp.urls')),
+    
     path('', include('TiendaVirtual.urls')),
+    
     
     #path('TiendaVirtual/', include('TiendaVirtual.urls')) se podria hacer lo mism con otras aplicaciones
     #al raiz del pat se puede dejar vacia o

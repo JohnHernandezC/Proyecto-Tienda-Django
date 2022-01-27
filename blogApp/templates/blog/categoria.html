@@ -1,0 +1,46 @@
+{% extends "TiendaVirtualApp/padre.html" %}
+
+  {% load static %}
+  {%block content %}
+
+
+  {% for i in blogs %}
+
+    <!-- Heading -->
+    <section class="page-section clearfix">
+        <div class="container">
+          <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{i.imagenes.url}}" alt="" style="width: 50%">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+              <h2 class="section-heading mb-4" >
+                <span class="section-heading-lower">{{i.titulo}}</span>
+                <span class="section-heading-upper">{{i.contenido}}</span>
+                
+              
+              </h2>
+              
+             <div style="text-align:left"> autor: {{i.autor}}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   
+  {% endfor %}
+
+
+  <section >
+    <div style="width: 60%; background-color:rgba(20, 59, 187, 0.61); margin: auto; text-align:center; color:red;">tags: 
+      {% for i in blogs %}
+      {% for x in i.categorias.all %}
+      {{x.nombre}}
+      {% endfor %}
+      {% endfor %}
+    </div>
+
+
+  </section>
+ 
+
+
+    {% endblock %}

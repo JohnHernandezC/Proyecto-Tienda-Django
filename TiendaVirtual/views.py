@@ -15,6 +15,4 @@ def tienda(request):
 
 
 
-def contactos(request):
-    
-    return render(request, "TiendaVirtualApp/contactos.html")
+
