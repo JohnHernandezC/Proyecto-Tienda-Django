@@ -4,7 +4,21 @@
   {%block content %}
 
 
-  <div><p style="color: white;">{{formulario}}</p></div>
+  <div class="contenedorFormulario">
+    {% if "valido" in request.GET %}
+      <p>informacion enviada correctamente</p>
+    
+    {% endif%}
+    {% if "novalido" in request.GET %}
+      <p>informacion no a sido enviada correctamente</p>
+    
+    {% endif%}
+    <form method="post" action="" style="text-align:center">
+      {% csrf_token %}
+    <table  style="color: white; margin: 20px auto;">{{formulario.as_table}}</table>
+    <input type="submit" value="Enviar">
+  </form>
+  </div>
 
-
+   {{request.POST}}<!-- Eso nos ayuda a ver que es lo que contienen el metodo post de este formulario-->
     {% endblock %}
