@@ -1,0 +1,31 @@
+{% extends "TiendaVirtualApp/padre.html" %}
+
+{% load static %}
+{%block content %}
+<div class="container">
+  <div class="row">
+    {% for i in productos %}
+     <div class="col-md-3"><!--eso ayuda a definir cuantos articulos quiero por columna-->
+    <div class="card" style="width: 100%; margin: 5px 5px;" >
+      <img src="{{i.imagen.url}}" alt=""  class="card-img-top">
+      <div class="card-body" style="text-align: center">
+        <h6 class="card-title">{{i.nombrep}}</h6>
+        <p class="card_text">{{i.precio}}&nbsp;$</p>
+        <span class="section-heading-upper">{{i.categoria}}</span>
+
+
+        <span class="section-heading-upper">{{i.disponibilidad}}</span>
+      </div>
+
+      
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
