@@ -3,7 +3,12 @@
 {% load static %}
 {%block content %}
 <div class="container">
+  <div style="float: right;">
+  <!--<p>total: {{importe_total_carro}}</p>-->
+  {% include "carro/widget.html" %}
+  </div>
   <div class="row">
+    
     {% for i in productos %}
      <div class="col-md-3"><!--eso ayuda a definir cuantos articulos quiero por columna-->
     <div class="card" style="width: 100%; margin: 5px 5px;" >
@@ -11,17 +16,16 @@
       <div class="card-body" style="text-align: center">
         <h6 class="card-title">{{i.nombrep}}</h6>
         <p class="card_text">{{i.precio}}&nbsp;$</p>
-        <span class="section-heading-upper">{{i.categoria}}</span>
-
-
-        <span class="section-heading-upper">{{i.disponibilidad}}</span>
-      </div>
-
+        
       
     </div>
+    <div class="card-footer text-center">
+      <a href="{% url 'carro:agregar' i.id %}" class="btn btn-success">Agregar al carro</a>
     </div>
-    {% endfor %}
+
+    </div>
   </div>
+  {% endfor %}
 </div>
 
 

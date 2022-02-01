@@ -24,6 +24,7 @@ urlpatterns = [
     path('contactos/', include('contactoApp.urls')),
     path('blogs/', include('blogApp.urls')),
     path('tienda/', include('tiendaApp.urls')),
+    path('carro/', include('carroApp.urls')),
     
     
     path('', include('TiendaVirtual.urls')),
