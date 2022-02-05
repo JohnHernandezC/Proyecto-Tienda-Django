@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'contactoApp',
     'tiendaApp',
     'carroApp',
+    'authenticationApp',
     
     
 ]
